@@ -11,7 +11,7 @@ const AuthProvider = ({children})=>{
     useEffect(()=>{
         const autenticarUsuario = async ()=>{
             const token = localStorage.getItem('token')
-            if(!token){
+            if(!token){ 
                 setCargando(false)
                 return
             }
@@ -24,8 +24,9 @@ const AuthProvider = ({children})=>{
             }
             try {
                 const { data} = await clienteAxios('/veterinarios/perfil',config)
-
+                
                 setAuth(data)
+                
             } catch (error) {
                 console.log(error.response.data.msg);
                 setAuth({})

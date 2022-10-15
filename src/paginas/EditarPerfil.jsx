@@ -44,7 +44,7 @@ const EditarPerfil = () => {
                         <input 
                         type="text"
                         className="border bg-gray-50 w-full p-2 mt-5 rounded-lg"
-                        name='nombre'
+                        name='nombre'  
                         value={perfil.nombre || ""}
                         onChange={e => setPerfil({
                             ...perfil,
